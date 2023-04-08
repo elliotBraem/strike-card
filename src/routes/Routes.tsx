@@ -3,6 +3,7 @@ import { NavigationProps } from "./NavigationProps";
 
 import Loading from "../components/Loading";
 import Home from "../screens/Home";
+import EditorPage from "../EditorPage";
 
 const { Navigator, Screen } = createStackNavigator<NavigationProps>(
   <Loading />
