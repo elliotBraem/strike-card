@@ -2,7 +2,7 @@ import React, { useCallback, useEffect, useMemo, useState } from "react";
 import ls from "local-storage";
 import prettier from "prettier";
 import parserBabel from "prettier/parser-babel";
-import { useHistory, useParams } from "react-router-dom";
+// import { useHistory, useParams } from "react-router-dom";
 import Editor from "@monaco-editor/react";
 import {
   Widget,
@@ -96,8 +96,8 @@ const Layout = {
 };
 
 export default function EditorPage(props) {
-  const { widgetSrc } = useParams();
-  const history = useHistory();
+  const widgetSrc = "";
+  // const history = useHistory();
   const setWidgetSrc = props.setWidgetSrc;
 
   const [loading, setLoading] = useState(false);
@@ -561,7 +561,7 @@ export default function EditorPage(props) {
       //     widget: widgetSrc,
       //   },
       // });
-      history.replace(`/edit/`);
+      // history.replace(`/edit/`);
     } else if (path === undefined) {
       if (files.length === 0) {
         createFile(Filetype.Widget);
